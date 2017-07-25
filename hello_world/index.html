@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>File Uploading Form</title>
+</head>
+
+<body>
+
+	<h3>File Upload</h3>
+	Select a file to upload: <br />
+
+	<form action = "http://127.0.0.1:8081/process_get" method = "GET">
+		First Name: <input type = "text" name = "first_name"> <br>
+		Last Name: <input type = "text" name = "last_name"> <br>
+		<input type = "submit" value = "Submit">
+	</form>
+
+	<form action= "http://127.0.0.1:8081/process_post" method = "POST">
+		First Name: <input type = "text" name = "first_name"> <br>
+		Last Name: <input type = "text" name = "last_name"> <br>
+		<input type = "submit" value = "Submit">
+	</form>
+
+	<form ref='uploadForm' 
+	id='uploadForm' 
+	action='http://localhost:8081/upload' 
+	method='post' 
+	encType="multipart/form-data">
+	<input type="file" name="sampleFile" />
+	<input type='submit' value='Upload!' />
+</form>     
+
+</body>
+</html>
